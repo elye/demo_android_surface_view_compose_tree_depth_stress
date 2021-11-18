@@ -9,7 +9,7 @@ object Constant {
     const val strokeColor = Color.BLACK
     const val strokeWidth = 3f
     const val branchLength = 350f
-    const val treeDepth = 12
+    var treeDepth = 12f
     const val branchAngleDifference = 0.25f
     const val branchAngle = -(PI / 2)
 }

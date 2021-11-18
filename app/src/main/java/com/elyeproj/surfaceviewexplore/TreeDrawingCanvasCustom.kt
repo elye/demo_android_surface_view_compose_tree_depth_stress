@@ -18,7 +18,7 @@ class TreeDrawingCanvasCustom {
         val centerX = canvas.width.toFloat() / 2
         val branchAngle = Constant.branchAngle
         val branchLength = Constant.branchLength
-        val treeDepth = Constant.treeDepth
+        val treeDepth = Constant.treeDepth.toInt()
         val branchAngleDifference = Constant.branchAngleDifference
 
         drawTree(

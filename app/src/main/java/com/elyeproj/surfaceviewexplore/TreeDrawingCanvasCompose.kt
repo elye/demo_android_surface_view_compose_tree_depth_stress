@@ -28,7 +28,7 @@ fun TreeDrawingCanvasCompose() {
                 .align(Alignment.CenterHorizontally),
             branchColor = MaterialTheme.colors.onBackground,
             branchLength = Constant.branchLength,
-            treeDepth = Constant.treeDepth,
+            treeDepth = Constant.treeDepth.toInt(),
             branchAngleDifference = Constant.branchAngleDifference
         )
     }

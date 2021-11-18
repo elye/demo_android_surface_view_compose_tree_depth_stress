@@ -3,7 +3,12 @@ package com.elyeproj.surfaceviewexplore
 import android.content.Context
 import android.graphics.Canvas
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlin.system.measureTimeMillis
 
 class ViewCustom @JvmOverloads constructor(
     context: Context,
@@ -17,7 +22,11 @@ class ViewCustom @JvmOverloads constructor(
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
+//        val elapsedTime= measureTimeMillis {
+
         treeDrawing.draw(canvas)
+//        }
+//        Log.d("Elisha", "Time used $elapsedTime")
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
