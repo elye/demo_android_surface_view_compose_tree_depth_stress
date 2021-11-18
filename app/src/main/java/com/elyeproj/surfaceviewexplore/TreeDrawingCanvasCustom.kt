@@ -2,11 +2,12 @@ package com.elyeproj.surfaceviewexplore
 
 import android.graphics.Canvas
 import android.graphics.Paint
+import android.util.Log
 import kotlin.math.PI
 import kotlin.math.cos
 import kotlin.math.sin
 
-class TreeDrawingCanvasCustom() {
+class TreeDrawingCanvasCustom {
 
     private val strokePaint = Paint()
         .apply { color = Constant.strokeColor }

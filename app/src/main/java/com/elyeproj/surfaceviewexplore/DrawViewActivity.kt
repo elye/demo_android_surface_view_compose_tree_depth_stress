@@ -17,7 +17,7 @@ class DrawViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         intent.extras?.get(KEY).apply {
-            when(this) {
+            when (this) {
                 Type.COMPOSE -> setContentView(R.layout.activity_composeview)
                 Type.SURFACE -> setContentView(R.layout.activity_surfaceview)
                 Type.CUSTOM -> setContentView(R.layout.activity_customview)
