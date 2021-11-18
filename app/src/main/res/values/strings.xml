@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Surface View Explore</string>
+    <string name="button_slow_view_animation">Slow View Animation</string>
+    <string name="button_slow_surfaceview_animation">Slow Surface View Animation</string>
+</resources>
