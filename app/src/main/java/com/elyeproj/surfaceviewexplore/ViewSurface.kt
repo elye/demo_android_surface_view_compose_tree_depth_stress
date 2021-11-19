@@ -40,7 +40,11 @@ class ViewSurface @JvmOverloads constructor(
                 val canvas = holder.lockCanvas()
                 canvas?.let {
                     it.drawColor(Color.WHITE)
-                    treeDrawing.draw(it)
+                    val elapsedTime= measureTimeMillis {
+                        treeDrawing.draw(it)
+                    }
+                    Log.d("Measure",
+                        "Surface inner took : ${elapsedTime}mS")
                     holder.unlockCanvasAndPost(it)
                 }
             }

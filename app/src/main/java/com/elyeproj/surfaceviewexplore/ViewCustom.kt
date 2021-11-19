@@ -19,7 +19,11 @@ class ViewCustom @JvmOverloads constructor(
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        treeDrawing.draw(canvas)
+        val elapsedTime= measureTimeMillis {
+            treeDrawing.draw(canvas)
+        }
+        Log.d("Measure",
+            "Custom inner took : ${elapsedTime}mS")
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
