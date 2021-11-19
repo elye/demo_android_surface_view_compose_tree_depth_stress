@@ -5,16 +5,13 @@ import android.graphics.Canvas
 import android.util.AttributeSet
 import android.util.Log
 import android.view.View
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import kotlin.system.measureTimeMillis
 
 class ViewCustom @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
-    defStyleAttr: Int = 0)
-    : View(context, attrs, defStyleAttr) {
+    defStyleAttr: Int = 0
+) : View(context, attrs, defStyleAttr) {
 
     private val treeDrawing by lazy {
         TreeDrawingCanvasCustom()
@@ -22,11 +19,7 @@ class ViewCustom @JvmOverloads constructor(
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-//        val elapsedTime= measureTimeMillis {
-
         treeDrawing.draw(canvas)
-//        }
-//        Log.d("Elisha", "Time used $elapsedTime")
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
@@ -35,7 +28,9 @@ class ViewCustom @JvmOverloads constructor(
         val desiredWidth = suggestedMinimumWidth + paddingLeft + paddingRight
         val desiredHeight = suggestedMinimumHeight + paddingTop + paddingBottom
 
-        setMeasuredDimension(resolveSize(desiredWidth, widthMeasureSpec),
-            resolveSize(desiredHeight, heightMeasureSpec))
+        setMeasuredDimension(
+            resolveSize(desiredWidth, widthMeasureSpec),
+            resolveSize(desiredHeight, heightMeasureSpec)
+        )
     }
 }

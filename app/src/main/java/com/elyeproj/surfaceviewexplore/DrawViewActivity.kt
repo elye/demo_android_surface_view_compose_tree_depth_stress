@@ -3,6 +3,7 @@ package com.elyeproj.surfaceviewexplore
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
+
 enum class Type {
     SURFACE, COMPOSE, CUSTOM
 }

@@ -3,10 +3,12 @@ package com.elyeproj.surfaceviewexplore
 import android.content.Context
 import android.graphics.Color
 import android.util.AttributeSet
+import android.util.Log
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import android.view.View
 import kotlinx.coroutines.*
+import kotlin.system.measureTimeMillis
 
 class ViewSurface @JvmOverloads constructor(
         context: Context,
