@@ -17,7 +17,9 @@ android {
     buildTypes {
 
         debug {
-            debuggable true
+            
+            debuggable false
+
             // Enables code shrinking, obfuscation, and optimization for only
             // your project's release build type.
             minifyEnabled true
